@@ -1,0 +1,19 @@
+class Solution{
+    int sum(Node root){
+        if(root==null){
+             return 0;
+         }
+         int sum1 = 0;
+         int sum2 = 0;
+         if(root.left!=null){
+             sum1 = root.left.data+sum(root.left);
+         }
+         if(root.right!=null){
+             sum2 = root.right.data+sum(root.right);
+         }
+         return root.data = sum1+sum2;
+    }
+    public void toSumTree(Node root){
+             sum(root);
+         }
+}
