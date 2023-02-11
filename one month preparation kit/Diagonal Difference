@@ -1,0 +1,12 @@
+public static int diagonalDifference(List<List<Integer>> arr) {
+    // Write your code here
+    int leftsum=0;
+    int rightsum=0;
+    for(int i=0;i<arr.size();i++){
+        leftsum += arr.get(i).get(i);
+        rightsum += arr.get(i).get(arr.size()-1-i);
+    }
+    int sum = leftsum-rightsum;
+    return Math.abs(sum);
+
+    }
