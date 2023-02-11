@@ -1,0 +1,20 @@
+public static String timeConversion(String s) {
+    // Write your code here
+    String hr = s.substring(0,2);
+    String cm = s.substring(2,8);
+    String noon = s.substring(8, 10);
+    int hrs = Integer.valueOf(hr);
+    if(noon.equals("PM") && hrs == 12){
+        return Integer.toString(hrs)+cm;
+    }
+    else if(noon.equals("PM") && hrs < 12){
+        return Integer.toString(hrs+12)+cm;
+    }
+    else if(noon.equals("AM") && hrs < 12){
+        return hr+cm;
+    }
+    else{
+        return "00"+cm;
+    }
+
+    }
